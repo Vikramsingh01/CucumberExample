@@ -1,0 +1,82 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Successful Login with Valid Credentials",
+        "description": "",
+        "id": "my-testing-feature;successful-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12616737943,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "HomeStepDefs.user_is_on_Home_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 60338,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User Navigate to Home Page",
+            "match": {
+              "location": "HomeStepDefs.user_Navigate_to_Home_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 43854,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "select products",
+            "match": {
+              "location": "HomeStepDefs.select_products()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23327,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "product add to cart Successfully",
+            "match": {
+              "location": "HomeStepDefs.product_add_to_cart_Successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "My Testing feature",
+    "description": "I want to use this template for my feature file",
+    "id": "my-testing-feature",
+    "keyword": "Feature",
+    "uri": "Home.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@tag"
+      }
+    ]
+  }
+]
