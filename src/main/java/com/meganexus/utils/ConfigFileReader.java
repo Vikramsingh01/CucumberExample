@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Properties;
 
 import com.meganexus.enums.DriverType;
@@ -93,6 +94,16 @@ public class ConfigFileReader {
 		else
 			throw new RuntimeException(
 					"Test Data Resource Path not specified in the Configuration.properties file for the Key:testDataResourcePath");
+	}
+
+	public String getPropertyValue(String property) {
+		String value = properties.getProperty("property");
+		if (value != null) {
+			return value;
+		}
+
+		else
+			throw new RuntimeException("property not specified in the Configuration.properties file.");
 	}
 
 }

@@ -1,17 +1,32 @@
-package com.meganexus.runner;
+/*package com.meganexus.runner;
+
+import org.openqa.selenium.WebDriver;
+
+import com.meganexus.utils.PageObjectManager;
+import com.meganexus.utils.TestContext;
+import com.meganexus.utils.WebDriverManager;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+public class Hooks{
 
-public class Hooks {
-	
-	@Before("@tag1")
-    public void beforeScenario(){
-        System.out.println("This will run before the Scenario");
-    }	
-	
-	@After("@tag1")
-    public void afterScenario(){
-        System.out.println("This will run after the Scenario");
+	TestContext testcontext;
+	WebDriver driver;
+	PageObjectManager pageObjectManager;
+	WebDriverManager webDriverManager;
+
+    @Before
+    public void testInitializer(){
+    	webDriverManager = new WebDriverManager();
+		driver = webDriverManager.getDriver();
+		pageObjectManager = new PageObjectManager(driver);
+		System.out.println("in before method");
+		
     }
-}
+
+
+    @After
+    public void tearDownTest(){
+        webDriverManager.getDriver().close();
+    }
+}*/

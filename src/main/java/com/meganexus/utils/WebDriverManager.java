@@ -24,6 +24,9 @@ public class WebDriverManager {
 		if(driver == null) driver = createDriver();
 		return driver;
 	}
+	 public void setDriver(WebDriver driver) {
+	        this.driver = driver;
+	    }
 
 	private WebDriver createDriver() {
 		   switch (environmentType) {	    
@@ -51,14 +54,15 @@ public class WebDriverManager {
     		break;
         }
 
-        if(FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize()==null) driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
 		return driver;
 	}	
 
-	public void closeDriver() {
-		driver.close();
-		driver.quit();
-	}
+	public void teardowndriver() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
 }

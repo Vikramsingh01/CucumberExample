@@ -1,4 +1,4 @@
-package com.meganexus.utils;
+/*package com.meganexus.utils;
 public class TestContext {
 	private WebDriverManager webDriverManager;
 	private PageObjectManager pageObjectManager;
@@ -17,4 +17,4 @@ public class TestContext {
 		return pageObjectManager;
 	}
  
-}
+}*/
