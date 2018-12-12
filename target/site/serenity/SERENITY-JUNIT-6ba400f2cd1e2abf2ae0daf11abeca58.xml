@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Testing Filter feature" skipped="0" tests="1" time="192.99" timestamp="2018-12-344 07:32:50"><testcase name="Team service user filter testing after Successful Login"><error message="Can not set net.serenitybdd.core.pages.WebElementFacade field com.megannexus.pages.LoginPage.login_Lnk to com.sun.proxy.$Proxy20" type="java.lang.IllegalArgumentException">Can not set net.serenitybdd.core.pages.WebElementFacade field com.megannexus.pages.LoginPage.login_Lnk to com.sun.proxy.$Proxy20</error><system-err>Can not set net.serenitybdd.core.pages.WebElementFacade field com.megannexus.pages.LoginPage.login_Lnk to com.sun.proxy.$Proxy20&#13;
-com.megannexus.pages.LoginPage.&lt;init&gt;(LoginPage.java:27)&#13;
-com.meganexus.utils.PageObjectManager.getLoginPage(PageObjectManager.java:21)&#13;
-com.meganexus.StepDefs.LoginStepDefs.open_Browser_and_launch_URL(LoginStepDefs.java:25)&#13;
-✽.Given Open Browser and launch URL(Login.feature:6)&#13;
-</system-err></testcase></testsuite>

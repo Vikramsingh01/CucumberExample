@@ -48,13 +48,6 @@ public class ConfigFileReader {
 			throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
 	}
 
-	public String getApplicationUrl() {
-		String url = properties.getProperty("url");
-		if (url != null)
-			return url;
-		else
-			throw new RuntimeException("url not specified in the Configuration.properties file.");
-	}
 
 	public DriverType getBrowser() {
 		String browserName = properties.getProperty("browser");
@@ -97,7 +90,7 @@ public class ConfigFileReader {
 	}
 
 	public String getPropertyValue(String property) {
-		String value = properties.getProperty("property");
+		String value = properties.getProperty(property);
 		if (value != null) {
 			return value;
 		}
