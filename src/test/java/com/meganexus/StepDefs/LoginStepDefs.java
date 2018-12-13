@@ -1,25 +1,28 @@
 package com.meganexus.StepDefs;
 
+import com.megannexus.pages.LoginPage;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginStepDefs {
+	LoginPage lp= new LoginPage();
 
 	@Given("^Open Browser and launch URL$")
 	public void open_Browser_and_launch_URL() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
+    lp.Launch_URL();
 	}
 
 	@When("^user enter username and password$")
 	public void user_enter_username_and_password() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
+		lp.login();
 	}
 
 	@When("^user click on login button$")
 	public void user_click_on_login_button() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
+		System.out.println("User is logged in..");
 	}
 
 	@Given("^User is on Home Page$")

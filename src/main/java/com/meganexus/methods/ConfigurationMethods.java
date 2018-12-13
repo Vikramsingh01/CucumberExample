@@ -5,16 +5,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import env.DriverUtil;
-import org.openqa.selenium.WebDriver;
+import com.meganexus.utils.WebDriverManager;
 
 public class ConfigurationMethods implements BaseTest
 {	  
 	protected WebDriver driver;
 	public ConfigurationMethods() {
-		driver = DriverUtil.getDefaultDriver();
+		driver = WebDriverManager.getDriver(); // modified ..
 	}
 	/** Method to print desktop configuration	 */
 	public void printDesktopConfiguration()

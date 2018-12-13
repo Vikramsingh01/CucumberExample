@@ -9,12 +9,12 @@ import java.util.Calendar;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
-import env.DriverUtil;
 import org.openqa.selenium.WebDriver;
 
+import com.meganexus.utils.WebDriverManager;
+
 public class ScreenShotMethods implements BaseTest {
-	protected WebDriver driver = DriverUtil.getDefaultDriver();
+	protected WebDriver driver = WebDriverManager.getDriver();
 	/** Method to take screen shot and save in ./Screenshots folder*/
 	public void takeScreenShot() throws IOException
 	{

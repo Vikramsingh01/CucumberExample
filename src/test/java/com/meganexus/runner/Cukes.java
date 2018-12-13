@@ -19,7 +19,7 @@ import cucumber.api.junit.Cucumber;
 				 "pretty", "html:target/cucumberHtmlReport",
 			     "html:target/cucumberHtmlReport",//for html result
 				 "pretty:target/cucumber-json-report.json",//for json result
-			     "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"
+			     "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports-html/report.html"
 			     },
 				
 		        tags = { "@tag" },
@@ -32,7 +32,6 @@ import cucumber.api.junit.Cucumber;
 	)
 
 public class Cukes {
-	
 	@AfterClass
     public static void writeExtentReport() {
         Reporter.loadXMLConfig(new File("configs/report.xml"));

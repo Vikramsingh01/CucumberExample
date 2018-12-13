@@ -2,6 +2,7 @@
 package com.meganexus.utils;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,31 +11,27 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.ErrorHandler;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.meganexus.enums.DriverType;
 import com.meganexus.enums.EnvironmentType;
 
 public class WebDriverManager {
-	protected static WebDriver driver;
-	private static DriverType driverType;
+	public static WebDriver driver;
+	private static DriverType driverType ;
 	private static EnvironmentType environmentType;
 	private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
 
-	public WebDriverManager() {
-		driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
-		environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();
+	static {
+		 driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
+		 environmentType = FileReaderManager.getInstance().getConfigReader().getEnvironment();
+		 driver = createDriver();
 	}
-
+	
 	public static WebDriver getDriver() {
-		if (driver == null) {
+		/*if (driver == null) {
 			driver = createDriver();
-		}
+		}*/
 		return driver;
-	}
-
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
 	}
 
 	private static WebDriver createDriver() {
@@ -87,11 +84,11 @@ public class WebDriverManager {
 			chromeOptions.addArguments("--incognito");
 			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 			System.out.println("********************* before driver created");
-			 driver = new ChromeDriver();
+			driver = new ChromeDriver();
 			System.out.println("********************* after driver created");
 			ErrorHandler handler = new ErrorHandler();
 			handler.setIncludeServerErrors(false);
-			//((RemoteWebDriver) driver).setErrorHandler(handler);
+			// ((RemoteWebDriver) driver).setErrorHandler(handler);
 			return driver;
 
 		}

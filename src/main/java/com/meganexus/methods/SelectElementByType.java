@@ -1,16 +1,17 @@
 package com.meganexus.methods;
 
-import env.DriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.meganexus.utils.WebDriverManager;
 
 public class SelectElementByType 
 {
 	protected WebDriver driver;
 	protected WebDriverWait wait;
 	public SelectElementByType() {
-		driver = DriverUtil.getDefaultDriver();
+		driver = WebDriverManager.getDriver();
 		wait = new WebDriverWait(driver, 30);
 	}
 	/**Method to select element 'by' type
